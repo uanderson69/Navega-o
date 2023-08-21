@@ -1,40 +1,19 @@
 import 'package:flutter/material.dart';
-import 'models/categorias.dart';
-import 'models/mock_data.dart';
+import 'package:navegacao/Telas/tela_categoria.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MeuCardapio());
 }
 
-class MyApp extends StatelessWidget {
+class MeuCardapio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('Categorias')),
-        body: CategoryList(categories: mockCategories),
+      title: "Meu Cardápio",
+      theme: ThemeData(
+        primaryColor: Colors.blue,
       ),
-    );
-  }
-}
-
-class CategoryList extends StatelessWidget {
-  final List<Categoria> categories;
-
-  CategoryList({required this.categories});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: categories.length,
-      itemBuilder: (ctx, index) {
-        return ListTile(
-          title: Text(categories[index].titulo),
-          leading: CircleAvatar(
-            backgroundColor: categories[index].color,
-          ),
-        );
-      },
+      home: TelasCategorias(),
     );
   }
 }
