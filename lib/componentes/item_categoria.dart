@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:navegacao/models/categorias.dart';
 import 'package:navegacao/Telas/tela_produtos.dart';
+import 'package:navegacao/utils/rotas.dart';
 
 class ItemCategoria extends StatelessWidget {
-  void selecionarCategoria(BuildContext context) {
-    //PROGRAMACAO
-    Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-      return TelaProdutos(categoria);
-    }));
-  }
-
+  //PROGRAMACAO
+  // Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+  // return TelaProdutos(categoria);
+  // }));
+  //}
   final Categoria categoria;
-
   ItemCategoria(this.categoria);
+
+  void selecionarCategoria(BuildContext context) {
+    Navigator.of(context).pushNamed(Rotas.PRODUTOS, arguments: categoria);
+  }
 
   @override
   Widget build(BuildContext context) {
