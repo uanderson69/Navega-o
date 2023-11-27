@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+
 import '../models/produtos.dart';
 
 const dummyProdutos = [
@@ -88,6 +88,7 @@ const dummyProdutos = [
     imageUrl:
         'https://cdn.pixabay.com/photo/2018/07/10/21/23/pancake-3529653_1280.jpg',
     duration: 20,
+   
     isGlutenFree: true,
     isVegan: false,
     isVegetarian: true,
@@ -101,6 +102,7 @@ const dummyProdutos = [
     imageUrl:
         'https://cdn.pixabay.com/photo/2018/06/18/16/05/indian-food-3482749_1280.jpg',
     duration: 35,
+  
     isGlutenFree: true,
     isVegan: false,
     isVegetarian: false,
@@ -114,6 +116,7 @@ const dummyProdutos = [
     imageUrl:
         'https://cdn.pixabay.com/photo/2014/08/07/21/07/souffle-412785_1280.jpg',
     duration: 45,
+   
     isGlutenFree: true,
     isVegan: false,
     isVegetarian: true,
