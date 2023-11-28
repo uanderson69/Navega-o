@@ -1,6 +1,6 @@
 
 
-import 'package:navegacao/telas/tela_produtos.dart';
+import 'package:aulas_navegacao/Telas/tela_produtos.dart';
 import 'package:flutter/material.dart';
 
 import '../models/categorias.dart';
@@ -13,13 +13,7 @@ class CategoriaItem extends StatelessWidget {
   CategoriaItem(this.categoria);
 
   void selecionarCategoria(BuildContext context){
-    //PROGRAMAR
-    // Navigator.of(context).push(
-    //   MaterialPageRoute(builder: (_){
-    //     return TelaProdutos(categoria);
-    //   })
-    // );
-    
+ 
 
     Navigator.of(context).pushNamed(Rotas.PRODUTOS,  arguments: {'id': categoria.id, 'title': categoria.titulo});
   }
